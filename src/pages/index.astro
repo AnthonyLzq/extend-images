@@ -1,0 +1,64 @@
+---
+import ImageExtender from '../components/ImageExtender';
+import '../styles/global.css';
+
+const jsonLd = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'Custom Image Size',
+  description:
+    'Extend an image canvas with empty space. Set a final size larger than the image; the image is never resized or scaled.',
+  applicationCategory: 'DesignApplication',
+  operatingSystem: 'Any',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+});
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Custom Image Size — Extend an image canvas without resizing</title>
+    <meta
+      name="description"
+      content="Add empty space around an image without resizing it. Set any final canvas size and get a PNG with transparent padding. Free, no uploads, runs in your browser."
+    />
+    <meta property="og:title" content="Custom Image Size" />
+    <meta
+      property="og:description"
+      content="Extend an image's canvas with empty space. No resizing, no AI, fully in your browser."
+    />
+    <meta property="og:type" content="website" />
+    <script type="application/ld+json" set:html={jsonLd} />
+  </head>
+  <body>
+    <main>
+      <h1>Extend your image canvas, without resizing</h1>
+      <p class="lead">
+        Choose an image, set a final size, and the extra space stays empty. The
+        image keeps its exact pixels — it is never scaled, cropped, or uploaded
+        anywhere.
+      </p>
+      <ImageExtender client:load />
+      <noscript>
+        <p>This tool needs JavaScript to run in your browser.</p>
+      </noscript>
+      <section class="how">
+        <h2>How it works</h2>
+        <ul>
+          <li>
+            The image is drawn at its original size, centered on a larger
+            canvas.
+          </li>
+          <li>The added space is transparent; the result downloads as a PNG.</li>
+          <li>
+            If the final size is smaller than the image, the tool shows an error
+            instead of cropping.
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+:root {
+  --bg: #0f1115;
+  --panel: #181b22;
+  --border: #2a2f3a;
+  --text: #e8eaf0;
+  --muted: #9aa3b2;
+  --accent: #4f8ef7;
+  --error: #ff6b6b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+.lead {
+  color: var(--muted);
+}
+
+.extender {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.file-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button,
+.buttonish {
+  font: inherit;
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+input[type='number'] {
+  font: inherit;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+}
+
+.error {
+  color: var(--error);
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.35);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+}
+
+.checker {
+  display: inline-block;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  max-width: 100%;
+  overflow: auto;
+  background-image: conic-gradient(
+    #d7d9de 0 25%,
+    #ffffff 0 50%,
+    #d7d9de 0 75%,
+    #ffffff 0
+  );
+  background-size: 16px 16px;
+}
+
+.checker img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.result {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.pads {
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.how {
+  color: var(--muted);
+}
+
+.how h2 {
+  color: var(--text);
+}
