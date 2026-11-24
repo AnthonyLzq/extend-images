@@ -5,7 +5,7 @@ import '../styles/global.css';
 const jsonLd = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
-  name: 'Custom Image Size',
+  name: 'Extend Image',
   description:
     'Extend an image canvas with empty space. Set a final size larger than the image; the image is never resized or scaled.',
   applicationCategory: 'DesignApplication',
@@ -20,12 +20,14 @@ const jsonLd = JSON.stringify({
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <title>Custom Image Size — Extend an image canvas without resizing</title>
+    <title>Extend Image — Extend an image canvas without resizing</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     <meta
       name="description"
       content="Add empty space around an image without resizing it. Set any final canvas size and get a PNG with transparent padding. Free, no uploads, runs in your browser."
     />
-    <meta property="og:title" content="Custom Image Size" />
+    <meta property="og:title" content="Extend Image" />
     <meta
       property="og:description"
       content="Extend an image's canvas with empty space. No resizing, no AI, fully in your browser."
@@ -35,6 +37,10 @@ const jsonLd = JSON.stringify({
   </head>
   <body>
     <main>
+      <header class="site-header">
+        <img src="/favicon.png" alt="Extend Image logo" width="40" height="40" />
+        <span class="brand">Extend Image</span>
+      </header>
       <h1>Extend your image canvas, without resizing</h1>
       <p class="lead">
         Choose an image, set a final size, and the extra space stays empty. The

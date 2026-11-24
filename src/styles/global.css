@@ -30,6 +30,25 @@ main {
   color: var(--muted);
 }
 
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.site-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+}
+
 .extender {
   background: var(--panel);
   border: 1px solid var(--border);
